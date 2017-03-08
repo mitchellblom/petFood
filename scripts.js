@@ -6,21 +6,19 @@ function makeDom(xhrData) { //comes from makeDom(data) in the executeThisCodeAft
     var currentType;
     for (var i = 0; i < xhrData.dog_brands.length; i++) {
         currentDogFood = xhrData.dog_brands[i];
-
-      	// console.log(xhrData.dog_brands[i].type.length);
-
-        dogFoodString += ``
-        dogFoodString += ``
-        dogFoodString += `<div> ${currentDogFood.name} </div>`
+        dogFoodString += `<div>${currentDogFood.name}</div>`
         for (var j = 0; j < xhrData.dog_brands[i].types.length; j++) {
-        	console.log("second for loop works", xhrData.dog_brands[i].types[j].type)
-        	// currentType = xhrData.dog_brands.types[j];
-        	// dogFoodString += `<div> ${currentType.type} </div>`
+        	dogFoodString += `<li>${xhrData.dog_brands[i].types[j].type}<li>`
+	        for (var k = 0; k < xhrData.dog_brands[i].types[j].type.length; k++) {
+	        	console.log("third for loop: ", xhrData.dog_brands[i].types[j].volumes[k].name);
+	        	// add .name
+	        }
         }
         dogFoodString += ``
         dogFoodString += ``
         dogFoodString += ``
-        console.log("first for loop works", [i])
+        dogFoodString += ``
+        dogFoodString += ``
     }
 
     dogFoodContainer.innerHTML = dogFoodString;

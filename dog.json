@@ -1,6 +1,5 @@
 {
   "dog_brands": [
-
     {
       "name": "Chuck wagon",
       "types": [
@@ -33,6 +32,7 @@
       ]
     },
 
+
     {
       "name": "Purina",
       "types": [
@@ -64,6 +64,6 @@
         }
       ]
     }
-    
+
   ]
 }
