@@ -10,18 +10,12 @@ function makeDom(xhrData) { //comes from makeDom(data) in the executeThisCodeAft
         dogFoodString += `<div>${currentDogFood.name}</div>`;
         for (var j = 0; j < xhrData.dog_brands[i].types.length; j++) {
             dogFoodString += `<li>${xhrData.dog_brands[i].types[j].type}<li>`;
-            for (var k = 0; k < xhrData.dog_brands[i].types[j].type.length; k++) {
+            for (var k = 0; k < xhrData.dog_brands[i].types[j].volumes.length; k++) {
                 currentOz = xhrData.dog_brands[i].types[j].volumes[k];
-                console.log("currentOz", currentOz); // adding .name to currentOz results in "cannot read property of undefined"
-                // for (var l = 0; l < xhrData.dog_brands[i].types[j].type[k].length; l++) {
-                //     console.log("currentOz", currentOz);	
-                //     // console.log("third for loop: ", currentOz.name);			
-                //     // dogFoodString += `<li>${currentOz.name}</li>`;
-                // }
             }
+                dogFoodString += `${currentOz.name} for $`;
+                dogFoodString += `${currentOz.price}`;
         }
-        dogFoodString += ``
-        dogFoodString += ``
         dogFoodString += ``
         dogFoodString += ``
     }
