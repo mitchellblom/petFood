@@ -1,0 +1,65 @@
+{
+  "cat_brands": [
+    {
+      "brand": "Purrina",
+      "breeds": [
+        {
+          "type": "Siamese, Bengal, Snowshoe, Munchkin",
+          "volumes": [
+            {
+              "age": "Kitten",
+              "name": "20oz",
+              "price": 19.99
+            },
+            {
+              "age": "Kitten",
+              "name": "32oz",
+              "price": 26.99
+            },
+            {
+              "age": "Kitten",
+              "name": "64oz",
+              "price": 34.99
+            },
+            {
+              "age": "Elite",
+              "name": "20oz",
+              "price": 24.99
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "brand": "Meow Meal",
+      "types": [
+        {
+          "type": "Manx, Egyptian Mau, Himalayan, Rag Doll",
+          "volumes": [
+            {
+              "name": "16oz",
+              "price": 8.99
+            },
+            {
+              "name": "24oz",
+              "price": 14.99
+            }
+          ]
+        },
+        {
+          "type": "standard",
+          "volumes": [
+            {
+              "name": "58oz",
+              "price": 19.99
+            },
+            {
+              "name": "72oz",
+              "price": 24.99
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
