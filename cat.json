@@ -38,13 +38,23 @@
           "volumes": [
             {
               "age": "Kitten",
-              "name": "16oz",
-              "price": 8.99
+              "name": "24oz",
+              "price": 19.99
             },
             {
               "age": "Kitten",
-              "name": "24oz",
-              "price": 14.99
+              "name": "48oz",
+              "price": 34.99
+            },
+            {
+              "age": "Adult",
+              "name": "28oz",
+              "price": 22.99
+            },
+            {
+              "age": "Adult",
+              "name": "56oz",
+              "price": 40.99
             }
           ]
         }

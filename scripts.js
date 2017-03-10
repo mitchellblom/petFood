@@ -14,14 +14,14 @@ function makeDom(xhrData) { //comes from makeDom(data) in the executeThisCodeAft
 
     for (var i = 0; i < xhrData.dog_brands.length; i++) {
         currentDogFood = xhrData.dog_brands[i];
-        dogFoodString += `<div>${currentDogFood.name}</div>`;
         for (var j = 0; j < xhrData.dog_brands[i].types.length; j++) {
-            dogFoodString += `<li>${xhrData.dog_brands[i].types[j].type}<li>`;
             for (var k = 0; k < xhrData.dog_brands[i].types[j].volumes.length; k++) {
                 currentOz = xhrData.dog_brands[i].types[j].volumes[k];
+       		 	dogFoodString += `<div>${currentDogFood.name}</div>`;
+           		dogFoodString += `<li>${xhrData.dog_brands[i].types[j].type}<li>`;
+	            dogFoodString += `${currentOz.name} for $`;
+	            dogFoodString += `${currentOz.price}`;
             }
-            dogFoodString += `${currentOz.name} for $`;
-            dogFoodString += `${currentOz.price}`;
         }
     }
     dogFoodContainer.innerHTML = dogFoodString;
@@ -52,18 +52,15 @@ function makeDom2(xhrData2) {
 
     for (var i = 0; i < xhrData2.cat_brands.length; i++) {
         currentCatFood = xhrData2.cat_brands[i];
-        console.log("first cat string works");
-        catFoodString += `<div>${currentCatFood.brand}</div>`;
         for (var j = 0; j < xhrData2.cat_brands[i].breeds.length; j++) {
-        	console.log("second cat string works");
-            catFoodString += `<li>${xhrData2.cat_brands[i].breeds[j].type}<li>`;
             for (var k = 0; k < xhrData2.cat_brands[i].breeds[j].volumes.length; k++) {
-            	console.log("third cat string works");
                 currentOz2 = xhrData2.cat_brands[i].breeds[j].volumes[k];
-            }
-            catFoodString += `${currentOz2.age}`;
+        	catFoodString += `<div>${currentCatFood.brand}</div>`;
+            catFoodString += `<li>${xhrData2.cat_brands[i].breeds[j].type}<li>`;
+            catFoodString += `${currentOz2.age} `;
             catFoodString += `${currentOz2.name} for $`;
             catFoodString += `${currentOz2.price}`;
+            }
         }
     }
     catFoodContainer.innerHTML = catFoodString;
