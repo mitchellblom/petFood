@@ -52,17 +52,19 @@ function makeDom2(xhrData2) {
 
     for (var i = 0; i < xhrData2.cat_brands.length; i++) {
         currentCatFood = xhrData2.cat_brands[i];
+        console.log("first cat string works");
         catFoodString += `<div>${currentCatFood.brand}</div>`;
-        // for (var j = 0; j < xhrData2.cat_brands[i].breeds.length; j++) {
-        // 	console.log("second cat string works");
-        //     catFoodString += `<li>${xhrData2.cat_brands[i].breeds[j].type}<li>`;
-        //     for (var k = 0; k < xhrData2.cat_brands[i].breeds[j].volumes.length; k++) {
-        //         currentOz2 = xhrData2.cat_brands[i].breeds[j].volumes[k];
-        //     }
-        //     catFoodString += `${currentOz2.age}`;
-        //     catFoodString += `${currentOz2.name} for $`;
-        //     catFoodString += `${currentOz2.price}`;
-        // }
+        for (var j = 0; j < xhrData2.cat_brands[i].breeds.length; j++) {
+        	console.log("second cat string works");
+            catFoodString += `<li>${xhrData2.cat_brands[i].breeds[j].type}<li>`;
+            for (var k = 0; k < xhrData2.cat_brands[i].breeds[j].volumes.length; k++) {
+            	console.log("third cat string works");
+                currentOz2 = xhrData2.cat_brands[i].breeds[j].volumes[k];
+            }
+            catFoodString += `${currentOz2.age}`;
+            catFoodString += `${currentOz2.name} for $`;
+            catFoodString += `${currentOz2.price}`;
+        }
     }
     catFoodContainer.innerHTML = catFoodString;
 }

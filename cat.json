@@ -32,30 +32,19 @@
     },
     {
       "brand": "Meow Meal",
-      "types": [
+      "breeds": [
         {
           "type": "Manx, Egyptian Mau, Himalayan, Rag Doll",
           "volumes": [
             {
+              "age": "Kitten",
               "name": "16oz",
               "price": 8.99
             },
             {
+              "age": "Kitten",
               "name": "24oz",
               "price": 14.99
-            }
-          ]
-        },
-        {
-          "type": "standard",
-          "volumes": [
-            {
-              "name": "58oz",
-              "price": 19.99
-            },
-            {
-              "name": "72oz",
-              "price": 24.99
             }
           ]
         }
