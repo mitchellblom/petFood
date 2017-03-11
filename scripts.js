@@ -14,9 +14,9 @@ function makeDom(xhrData) { //comes from makeDom(data) in the executeThisCodeAft
 
     for (var i = 0; i < xhrData.dog_brands.length; i++) {
         currentDogFood = xhrData.dog_brands[i];
-        dogFoodString += `<h4>${currentDogFood.name}</h4>`;
+        dogFoodString += `<h4><hr>${currentDogFood.name}<hr></h4>`;
         for (var j = 0; j < xhrData.dog_brands[i].types.length; j++) {
-            dogFoodString += `<p>${xhrData.dog_brands[i].types[j].type}</p>`;
+            dogFoodString += `<p><i>${xhrData.dog_brands[i].types[j].type}</i></p>`;
             for (var k = 0; k < xhrData.dog_brands[i].types[j].volumes.length; k++) {
                 currentOz = xhrData.dog_brands[i].types[j].volumes[k];
                 dogFoodString += `<p>${currentOz.name} for $`;
@@ -52,17 +52,13 @@ function makeDom2(xhrData2) {
 
     for (var i = 0; i < xhrData2.cat_brands.length; i++) {
         currentCatFood = xhrData2.cat_brands[i];
-        catFoodString += `<h4>${currentCatFood.brand}</h4>`;
-        catFoodString += `<p>Recommended for: ${xhrData2.cat_brands[i].type}<p>`;
+        catFoodString += `<h4><hr>${currentCatFood.brand}</h4>`;
+        catFoodString += `<p>For: ${xhrData2.cat_brands[i].type}<hr><p>`;
         for (var j = 0; j < xhrData2.cat_brands[i].breeds.length; j++) {
-            catFoodString +=  `<p>${xhrData2.cat_brands[i].breeds[j].type}</p>`;
+            catFoodString +=  `<p><i>${xhrData2.cat_brands[i].breeds[j].type}</i></p>`;
             for (var k = 0; k < xhrData2.cat_brands[i].breeds[j].volumes.length; k++) {
-                catFoodString += `<p>${xhrData2.cat_brands[i].breeds[j].volumes[k].name} for `;
+                catFoodString += `<p>${xhrData2.cat_brands[i].breeds[j].volumes[k].name} for $`;
                 catFoodString += `${xhrData2.cat_brands[i].breeds[j].volumes[k].price}</p>`;
-                // catFoodString +=  `<p>${xhrData2.cat_brands[i].breeds[j].volumes}</p>`;
-            //     currentOz2 = xhrData2.cat_brands[i].breeds[j].volumes[k];
-            //     catFoodString += `<p>${currentOz2.name} for $`;
-            //     catFoodString += `${currentOz2.price}</p>`;
             }
         }
     }
