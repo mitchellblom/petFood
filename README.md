@@ -1,11 +1,11 @@
 # NSS Pet Food Exercise
 
-![Splashpage]()
+![Splashpage](https://raw.githubusercontent.com/mitchellblom/petFood/petFood/petFood.png)
 
 <hr>
 
 ## Project Summary
-Simple **JSON** and **XHR** exercise
+**JSON** and **XHR** exercise
 
 <hr>
 
@@ -19,6 +19,6 @@ Simple **JSON** and **XHR** exercise
 <hr>
 
 ## Demonstrated
- - **JSON** reading, editing, and validating
- - **XHR** requests
+ - **JSON** reading, writing, editing, and validating
+ - **XHR** requests and ordering
  - **Bootstrap** option
