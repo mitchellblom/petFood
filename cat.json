@@ -7,55 +7,67 @@
         {
           "volumes": [
             {
-              "age": "Kitten",
+          "type": "Kitten",
+          "volumes": [
+            {
               "name": "20oz",
               "price": 19.99
             },
             {
-              "age": "Kitten",
               "name": "32oz",
               "price": 26.99
             },
             {
-              "age": "Kitten",
               "name": "64oz",
               "price": 34.99
-            },
+            }
+          ]          
+        },
+        {
+          "type": "Elite",
+          "volumes": [
             {
-              "age": "Elite",
               "name": "20oz",
               "price": 24.99
             }
+          ]          
+        }
           ]
         }
       ]
     },
     {
-      "brand": "Meow Meal",
+      "brand": "Meow Mix",
+      "type": "Manx, Egyptian Mau, Himalayan, Rag Doll",
       "breeds": [
         {
-          "type": "Manx, Egyptian Mau, Himalayan, Rag Doll",
           "volumes": [
             {
-              "age": "Kitten",
+          "type": "Kitten",
+          "volumes": [
+            {
               "name": "24oz",
               "price": 19.99
             },
             {
-              "age": "Kitten",
               "name": "48oz",
               "price": 34.99
-            },
+            }
+          ]          
+        },
+        {
+          "type": "Adult",
+          "volumes": [
             {
-              "age": "Adult",
               "name": "28oz",
               "price": 22.99
             },
             {
-              "age": "Adult",
               "name": "56oz",
               "price": 40.99
             }
+          ]          
+        }
           ]
         }
       ]
