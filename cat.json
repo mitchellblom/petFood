@@ -2,9 +2,9 @@
   "cat_brands": [
     {
       "brand": "Purrina",
+      "type": "Siamese, Bengal, Snowshoe, Munchkin",
       "breeds": [
         {
-          "type": "Siamese, Bengal, Snowshoe, Munchkin",
           "volumes": [
             {
               "age": "Kitten",

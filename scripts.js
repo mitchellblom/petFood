@@ -14,13 +14,13 @@ function makeDom(xhrData) { //comes from makeDom(data) in the executeThisCodeAft
 
     for (var i = 0; i < xhrData.dog_brands.length; i++) {
         currentDogFood = xhrData.dog_brands[i];
+        dogFoodString += `<h4>${currentDogFood.name}</h4>`;
         for (var j = 0; j < xhrData.dog_brands[i].types.length; j++) {
+            dogFoodString += `<li>${xhrData.dog_brands[i].types[j].type}</li>`;
             for (var k = 0; k < xhrData.dog_brands[i].types[j].volumes.length; k++) {
                 currentOz = xhrData.dog_brands[i].types[j].volumes[k];
-       		 	dogFoodString += `<div>${currentDogFood.name}</div>`;
-           		dogFoodString += `<li>${xhrData.dog_brands[i].types[j].type}<li>`;
-	            dogFoodString += `${currentOz.name} for $`;
-	            dogFoodString += `${currentOz.price}`;
+                dogFoodString += `<p>${currentOz.name} for $`;
+                dogFoodString += `${currentOz.price}</p>`;
             }
         }
     }
@@ -46,20 +46,20 @@ myRequest.send();
 /////////////////// CAT FOOD //////////////////
 
 function makeDom2(xhrData2) {
-	var catFoodString = "";
+    var catFoodString = "";
     var currentCatFood;
     var currentOz2;
 
     for (var i = 0; i < xhrData2.cat_brands.length; i++) {
         currentCatFood = xhrData2.cat_brands[i];
+        catFoodString += `<h4>${currentCatFood.brand}</h4>`;
+        catFoodString += `<p>Recommended for: ${xhrData2.cat_brands[i].type}<p>`;
         for (var j = 0; j < xhrData2.cat_brands[i].breeds.length; j++) {
             for (var k = 0; k < xhrData2.cat_brands[i].breeds[j].volumes.length; k++) {
                 currentOz2 = xhrData2.cat_brands[i].breeds[j].volumes[k];
-        	catFoodString += `<div>${currentCatFood.brand}</div>`;
-            catFoodString += `<li>${xhrData2.cat_brands[i].breeds[j].type}<li>`;
-            catFoodString += `${currentOz2.age} `;
-            catFoodString += `${currentOz2.name} for $`;
-            catFoodString += `${currentOz2.price}`;
+                catFoodString += `<p>${currentOz2.age} </p>`;
+                catFoodString += `<p>${currentOz2.name} for $`;
+                catFoodString += `${currentOz2.price}</p>`;
             }
         }
     }
@@ -75,5 +75,3 @@ myRequest2.addEventListener("load", executeThisCodeAfterFileLoaded2);
 myRequest2.addEventListener("error", executeThisCodeAfterFileFails);
 myRequest2.open("GET", "cat.json");
 myRequest2.send();
-
-
