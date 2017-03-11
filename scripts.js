@@ -16,7 +16,7 @@ function makeDom(xhrData) { //comes from makeDom(data) in the executeThisCodeAft
         currentDogFood = xhrData.dog_brands[i];
         dogFoodString += `<h4>${currentDogFood.name}</h4>`;
         for (var j = 0; j < xhrData.dog_brands[i].types.length; j++) {
-            dogFoodString += `<li>${xhrData.dog_brands[i].types[j].type}</li>`;
+            dogFoodString += `<p>${xhrData.dog_brands[i].types[j].type}</p>`;
             for (var k = 0; k < xhrData.dog_brands[i].types[j].volumes.length; k++) {
                 currentOz = xhrData.dog_brands[i].types[j].volumes[k];
                 dogFoodString += `<p>${currentOz.name} for $`;
@@ -56,15 +56,14 @@ function makeDom2(xhrData2) {
         catFoodString += `<p>Recommended for: ${xhrData2.cat_brands[i].type}<p>`;
         for (var j = 0; j < xhrData2.cat_brands[i].breeds.length; j++) {
             catFoodString +=  `<p>${xhrData2.cat_brands[i].breeds[j].type}</p>`;
-            // console.log("second for loop: ", xhrData2.cat_brands[i].breeds.type[j]);
-            // var currentAge = xhrData2.cat_brands[i].breeds[j].volumes;
-            // catFoodString += currentAge.type;
-            // catFoodString += `<p>${currentOz2.age} </p>`;
-            // for (var k = 0; k < xhrData2.cat_brands[i].breeds[j].volumes.length; k++) {
+            for (var k = 0; k < xhrData2.cat_brands[i].breeds[j].volumes.length; k++) {
+                catFoodString += `<p>${xhrData2.cat_brands[i].breeds[j].volumes[k].name} for `;
+                catFoodString += `${xhrData2.cat_brands[i].breeds[j].volumes[k].price}</p>`;
+                // catFoodString +=  `<p>${xhrData2.cat_brands[i].breeds[j].volumes}</p>`;
             //     currentOz2 = xhrData2.cat_brands[i].breeds[j].volumes[k];
             //     catFoodString += `<p>${currentOz2.name} for $`;
             //     catFoodString += `${currentOz2.price}</p>`;
-            // }
+            }
         }
     }
     catFoodContainer.innerHTML = catFoodString;
