@@ -4,8 +4,6 @@
       "brand": "Purrina",
       "type": "Siamese, Bengal, Snowshoe, Munchkin",
       "breeds": [
-        {
-          "volumes": [
             {
           "type": "Kitten",
           "volumes": [
@@ -33,15 +31,11 @@
           ]          
         }
           ]
-        }
-      ]
-    },
+        },
     {
       "brand": "Meow Mix",
       "type": "Manx, Egyptian Mau, Himalayan, Rag Doll",
       "breeds": [
-        {
-          "volumes": [
             {
           "type": "Kitten",
           "volumes": [
@@ -72,5 +66,3 @@
         }
       ]
     }
-  ]
-}

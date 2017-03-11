@@ -55,13 +55,16 @@ function makeDom2(xhrData2) {
         catFoodString += `<h4>${currentCatFood.brand}</h4>`;
         catFoodString += `<p>Recommended for: ${xhrData2.cat_brands[i].type}<p>`;
         for (var j = 0; j < xhrData2.cat_brands[i].breeds.length; j++) {
-            // stuff goes here
-            for (var k = 0; k < xhrData2.cat_brands[i].breeds[j].volumes.length; k++) {
-                currentOz2 = xhrData2.cat_brands[i].breeds[j].volumes[k];
-                catFoodString += `<p>${currentOz2.age} </p>`;
-                catFoodString += `<p>${currentOz2.name} for $`;
-                catFoodString += `${currentOz2.price}</p>`;
-            }
+            catFoodString +=  `<p>${xhrData2.cat_brands[i].breeds[j].type}</p>`;
+            // console.log("second for loop: ", xhrData2.cat_brands[i].breeds.type[j]);
+            // var currentAge = xhrData2.cat_brands[i].breeds[j].volumes;
+            // catFoodString += currentAge.type;
+            // catFoodString += `<p>${currentOz2.age} </p>`;
+            // for (var k = 0; k < xhrData2.cat_brands[i].breeds[j].volumes.length; k++) {
+            //     currentOz2 = xhrData2.cat_brands[i].breeds[j].volumes[k];
+            //     catFoodString += `<p>${currentOz2.name} for $`;
+            //     catFoodString += `${currentOz2.price}</p>`;
+            // }
         }
     }
     catFoodContainer.innerHTML = catFoodString;
